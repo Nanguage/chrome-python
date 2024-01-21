@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="libs/jquery.js"></script>
+    <script src="libs/jquery.terminal.min.js"></script>
+    <script src="libs/unix_formatting.min.js"></script>
+    <script src="libs/prism.js"></script>
+    <script src="libs/jq_prism.js"></script>
+    <script src="libs/prism-python.js"></script>
+    <link href="libs/jquery.terminal.min.css" rel="stylesheet" />
+    <link href="libs/prism.css" rel="stylesheet" />
+    <style>
+        :root {
+            --size: 1.4;
+            --font: Consolas;
+        }
+
+        .terminal {
+            --size: 1.5;
+            --color: rgba(255, 255, 255, 0.8);
+        }
+
+        .noblink {
+            --animation: terminal-none;
+        }
+
+        body {
+            background-color: black;
+            width: 600px;
+            height: 400px;
+        }
+
+        #loading {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 45%;
+            left: 45%;
+            border: 3px solid rgba(172, 237, 255, 0.5);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            -webkit-animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        #menu-container {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            z-index: 100;
+        }
+
+        .window {
+            z-index: 101 !important;
+            min-height: 220px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading"></div>
+    <div id="menu-container"></div>
+    <div id="window-container" style="height:0px;"></div>
+    <script src="run-console.js"></script>
+</body>
+
+</html>

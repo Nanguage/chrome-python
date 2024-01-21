@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Python Console",
+  "description": "Run Python code in the browser!",
+  "version": "0.1",
+  "action": {
+    "default_popup": "content.html",
+    "default_icon": "icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+
+}
