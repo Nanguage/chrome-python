@@ -2,6 +2,13 @@
 
 window.app = {};
 
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === "run-code") {
+    console.log("run-code: ", message.data);
+    window.term.exec(message.data);
+  }
+});
+
 function sleep(s) {
     return new Promise((resolve) => setTimeout(resolve, s));
 }
