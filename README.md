@@ -2,7 +2,7 @@
 
 A chrome extension that allows you to run python code in the browser.
 
-![domo1](figs/demo1.png)
+![domo1](figs/demo2.png)
 
 ## Installation
 
